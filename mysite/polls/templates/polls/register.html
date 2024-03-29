@@ -1,0 +1,20 @@
+<h1>Welcome to registration</h1>
+
+<form action="{% url 'register' %}" method="post">
+{%csrf_token%} 
+    <input type="text" name="firstname" id="firstname" value="" placeholder="firstname">
+    <input type="text" name="lastname" id="lastname" value="" placeholder="lastname">
+    <input type="text" name="username" id="username" value="" placeholder="username">
+
+    <input type="password" name="password" id="password" value="" placeholder="password">
+    
+    
+    <input type="password" name="confirm_password" id="confirm_password" value="" placeholder="confirm password" >
+       <input style="background-color: aquamarine;"type="submit" value="Sign Up">
+
+   
+
+</form>
+
+
+

@@ -1,0 +1,25 @@
+<h1>Hello </h1>
+
+{%if latest_doctor_list%}
+   <ul>
+    {%for d in latest_doctor_list%}
+    <li><a href="{% url 'doctor_free_times' d.id %}">{{d.first_name}}-{{d.last_name}}-{{d.profession}}</a></li>
+    
+    {%endfor%}
+   </ul>
+
+{%else%}
+
+    <p>No doctors availabe</p>
+
+{%endif%}
+
+{% if user_info %}
+<p> {{ user_info }} </p>
+<a href="/polls/logout">Logout</a>
+{% else %}
+<p> Please login to continue </p>
+<a href="/polls/login">Login</a>
+{%endif%}
+
+

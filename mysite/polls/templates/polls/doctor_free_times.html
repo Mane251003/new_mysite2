@@ -1,0 +1,20 @@
+
+<h1>Free Times for Doctor: {{ doctor }}</h1>
+    <h2>Free Times:</h2>
+    <ul>
+        {% for time in free_hours %}
+            <li>{{ time }} ss</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for free_time in free_times %}
+            <li>{{ free_time }}</li>
+        {% endfor %}
+    </ul>
+    <h2>All Patient Times:</h2>
+    <ul>
+        {% for patient_time in all_patient_times %}
+            <li>{{ patient_time }}</li>
+        {% endfor %}
+    </ul>
